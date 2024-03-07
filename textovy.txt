@@ -1,0 +1,3 @@
+3;460;840;nemakola;
+2;auto;250;koloma;
+1;jo;500;nevim;

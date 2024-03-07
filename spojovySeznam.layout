@@ -1,0 +1,32 @@
+[
+    {
+        "caretX": 1,
+        "caretY": 1,
+        "filename": "E:/Stažené soubory/spojovySeznam-20240306T160238Z-001/spojovySeznam/funkce.cpp",
+        "focused": true,
+        "isOpen": true,
+        "leftChar": 1,
+        "order": 0,
+        "topLine": 49
+    },
+    {
+        "caretX": 1,
+        "caretY": 1,
+        "filename": "E:/Stažené soubory/spojovySeznam-20240306T160238Z-001/spojovySeznam/uzel.h",
+        "focused": false,
+        "isOpen": true,
+        "leftChar": 1,
+        "order": 1,
+        "topLine": 19
+    },
+    {
+        "caretX": 1,
+        "caretY": 1,
+        "filename": "E:/Stažené soubory/spojovySeznam-20240306T160238Z-001/spojovySeznam/main.cpp",
+        "focused": false,
+        "isOpen": true,
+        "leftChar": 1,
+        "order": 2,
+        "topLine": 1
+    }
+]

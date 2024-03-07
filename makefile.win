@@ -1,0 +1,37 @@
+# Project: spojovySeznam
+# Makefile created by Red Panda C++ 2.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = spojovySeznam_private.res
+OBJ      = main.o funkce.o $(RES)
+LINKOBJ  = main.o funkce.o $(RES)
+CLEANOBJ  =  main.o funkce.o spojovySeznam_private.res spojovySeznam.exe
+LIBS     =  -static
+INCS     =  
+CXXINCS  =  
+BIN      = spojovySeznam.exe
+CXXFLAGS = $(CXXINCS)  -g3 -O2 -pipe -D__DEBUG__
+CFLAGS   = $(INCS)  -g3 -O2 -pipe -D__DEBUG__
+RM       = del /q /f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(CLEANOBJ) > NUL 2>&1
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp uzel.h
+	$(CPP) -c C:/vyuka/4/A/papala/spojovySeznam/main.cpp -o main.o $(CXXFLAGS) 
+
+funkce.o: funkce.cpp uzel.h
+	$(CPP) -c C:/vyuka/4/A/papala/spojovySeznam/funkce.cpp -o funkce.o $(CXXFLAGS) 
+
+spojovySeznam_private.res: spojovySeznam_private.rc 
+	$(WINDRES) -i spojovySeznam_private.rc --input-format=rc -o spojovySeznam_private.res -O coff 
+
