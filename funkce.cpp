@@ -139,7 +139,7 @@ void Seznam::ulozitDoSouboru() {//ukladam do souboru
 	cout << "Zapis byl uspesny" << endl;
 }
 
-void Seznam::nacistZeSouboru() {//prozatim pridava na zacatek seznamu upravit pro to aby prepisoval
+void Seznam::nacistZeSouboru() {
 	fstream soubor;
 	string slovo, slovoKterePridavam;
 	int j = 0, dataKteraPridavam;
@@ -200,14 +200,11 @@ void Seznam::vyhledatPodlePolozky(int dataPodleKterychHledam) {
 	Uzel *p;
 	for(p = this->prvni;p != nullptr; p = p->getNasl()){//smycka projizdi vsechny uzly az po konec
 		if(p->getData() == dataPodleKterychHledam) {//pokud se hledana data rovanaji s daty, ktere jsou zrovna v uzlu ve kterem jsme
-			cout << "Data jsou: " << p->getData() << " ,Nazev je: " << p->getNazev() << endl;//vypiseme, zkousel jsem i pres return, ale uprimne jsem se ztratil v pointerech a program akorat rozbil
+			cout << "Data jsou: " << p->getData() << " ,Nazev je: " << p->getNazev() << endl;//vypiseme, zkousel jsem i pres return, ale ztratil jsem se v pointerech a program akorat rozbil
 		}
 	}
 }
 
-void Seznam::sortPodleDat() {
-	//vzdavam to
-}
 
 void Seznam::editDat(int coChciEditovat, int dataUzluKteryChciEditovat) {
 	Uzel *p;
